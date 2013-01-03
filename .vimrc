@@ -1,5 +1,7 @@
 syntax enable
-set autoindent "C-like configurable autoindent
+set autoindent
+set ci "C-like configurable autoindent
+set smartindent
 set nocompatible
 
 " color scheme
@@ -15,16 +17,18 @@ set ignorecase "case-insensitive search
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+set noexpandtab
 "set smarttab
 set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize "session save options
 set backspace=indent,eol,start "remove tabs and whitespace with del and backspace
 
 "set whitespace characters
-set listchars=tab:->,eol:$,trail:.,extends:#
+set listchars=tab:»-,eol:$,trail:.,extends:#
 
 "display whitespace characters
 set list
+
+autocmd! BufNewFile * silent! 0r ~/.vim/tmpl/tmpl.%:e
 
 "SO - open session
 nmap SO :wa<CR>:so ~/.vim/sessions/
@@ -38,6 +42,18 @@ nmap <A-left> :tabprevious<CR>
 
 "ctrl+e - alias for default zencoding hotkey
 imap <C-e> <C-y>,
+
+"auto close brackets
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+"inoremap        (  ()<Left>
+"inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+
+"inoremap        "  ""<Left>
+"inoremap        '  ''<Left>
 
 "function for F2 hotkey
 function SaveSession()
