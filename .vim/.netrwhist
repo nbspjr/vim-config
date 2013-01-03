@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/usr/home/jr/.kde4/share/apps/plasma/plasmoids/plasma_pyweather/contents/ui'
+let g:netrw_dirhist_2='/usr/home/jr/tmp'
+let g:netrw_dirhist_3='/usr/home/jr/docs/optima/data'
+let g:netrw_dirhist_4='/usr/ports/packages'
+let g:netrw_dirhist_5='/usr/ports/ports-mgmt/portmanager'
+let g:netrw_dirhist_6='/usr/home/jr/Projects/optima/drupal-optima/css'
+let g:netrw_dirhist_7='/usr/home/jr/.vim'
+let g:netrw_dirhist_8='/usr/home/jr/docs/ports'
+let g:netrw_dirhist_9='/usr/home/jr/.opera/styles/user/vk.css'
