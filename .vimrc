@@ -10,7 +10,7 @@ set t_Co=256 "use 256 colors
 colorscheme solarized
 
 " allow to move cursor by mouse click
-set mouse=ir
+set mouse=vic
 
 set number "display line numbers
 set showmatch
