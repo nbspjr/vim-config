@@ -9,6 +9,9 @@ set background=dark "dark BG
 set t_Co=256 "use 256 colors
 colorscheme solarized
 
+" allow to move cursor by mouse click
+set mouse=ir
+
 set number "display line numbers
 set showmatch
 set hlsearch
@@ -27,6 +30,9 @@ set listchars=tab:»-,eol:$,trail:.,extends:#
 
 "display whitespace characters
 set list
+
+"doxygen syntax
+let g:load_doxygen_syntax=1
 
 autocmd! BufNewFile * silent! 0r ~/.vim/tmpl/tmpl.%:e
 
